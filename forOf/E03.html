@@ -9,11 +9,29 @@
 
     //ENTRADA
 
+    let listaLivros = ["A Arte da Guerra", "Sistemas Inteligentes", "Introdução a Programação com JS", "1984", "Use a cabeça: JS"];
+    let romance = [];
+    let quantRomance = 0;
+    let tecnico = [];
+    let quantTecnico = 0;
 
     //PROCESSAMENTO
 
+    for (const livro of listaLivros) {
+        const perguntas = prompt("O livro " + livro + " é técnico (T) ou romance (R)?").toUpperCase();
+
+        if (perguntas === "T") {
+            tecnico.push(livro);
+            quantTecnico+=1;
+        } else {
+            romance.push(livro);
+            quantRomance+=1;
+        }
+    }
 
     //SAÍDA
 
+    document.write("Você tem "+quantRomance+" livros de romance, e eles são: "+romance.join(", ")+"</br>");
+    document.write("Você tem "+quantTecnico+" livros técnicos, e eles são: "+tecnico.join(", ")+"</br>");
 
 </script>

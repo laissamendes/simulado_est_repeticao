@@ -9,11 +9,19 @@
 
     //ENTRADA
 
+    let nomePessoas = ["Eduardo da Silva", "Eduardo Montandon", "Lucas Eduardo", "José da Silva", "Rafael Gonçalves"];
+
+    let nomes = [];
 
     //PROCESSAMENTO
 
-
+    for (const descendentes of nomePessoas) {
+        if (descendentes.search("Silva") >= 0) {
+            nomes.push(descendentes);
+        }
+    }
     //SAÍDA
+    document.write("existem " + nomes.length + " descendentes, e eles são: " + nomes.join(", "));
 
 
 </script>

@@ -8,11 +8,25 @@
 
     //ENTRADA
 
+    const quantAlunos = parseInt(prompt("Diga quantos alunos você tem:"));
+    let nomeMeninas = [];
+    let nomeMeninos = [];
 
     //PROCESSAMENTO
 
-
+    for (let contador = 1; contador <= quantAlunos; contador++) {
+        let nomes = prompt("qual o nome do " + contador + "° aluno?");
+        let genero = prompt("Qual o gênero do aluno " + nomes + "?(MAS; FEM)").toUpperCase();
+        if (genero === "MAS") {
+            nomeMeninos.push(nomes);
+        } else {
+            nomeMeninas.push(nomes);
+        }
+    }
     //SAÍDA
 
-    
+    document.write("Nomes de meninas: " + nomeMeninas.sort().join(", ")+"</br>");
+    document.write("Nomes de meninos: " + nomeMeninos.sort().join(", "));
+
+
 </script>
